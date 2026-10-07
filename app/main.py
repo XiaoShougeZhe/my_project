@@ -6,7 +6,7 @@ from app import models
 
 app = FastAPI()
 
-Base.metadata.create_all(bild=engine)
+Base.metadata.create_all(bind=engine)
 # ===CORS===
 app.add_middleware(
     CORSMiddleware,
