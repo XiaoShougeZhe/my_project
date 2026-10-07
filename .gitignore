@@ -1,0 +1,15 @@
+.env
+# VS Code files
+bin/
+locales/
+policies/
+resources/
+tools/
+*.pak
+*.dll
+*.dat
+*.bin
+*.exe
+__pycache__/
+*.pyc
+works/
