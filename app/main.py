@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routers import items, users
+from app.database import engine, Base
+from app import models
 
 app = FastAPI()
+
+Base.metadata.create_all(bild=engine)
 # ===CORS===
 app.add_middleware(
     CORSMiddleware,
