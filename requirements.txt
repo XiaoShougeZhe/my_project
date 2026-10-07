@@ -6,5 +6,5 @@ python-dotenv
 passlib
 bcrypt
 python-jose[cryptography]
-pygantic[email]
+pydantic[email]
 python-multipart
