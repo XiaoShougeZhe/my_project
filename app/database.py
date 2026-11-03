@@ -5,10 +5,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 load_dotenv()
-SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
+print("DATABASE_URL =", os.getenv("DATABASE_URL"))
+SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:4elovek756@localhost:5432/my_project_db")
 
-SQLALCHEMY_DATABASE__URL = "sqlite:///./test.db"
-engine = create_engine(SQLALCHEMY_DATABASE__URL, connect_args={"check_same_thread": False})
+SQLALCHEMY_DATABASE__URL = "postgresql://postgres:4elovek756@localhost:5432/my_project_db"
+engine = create_engine(SQLALCHEMY_DATABASE__URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
