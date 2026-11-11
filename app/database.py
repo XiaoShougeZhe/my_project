@@ -7,7 +7,7 @@ from sqlalchemy.orm import sessionmaker
 load_dotenv()
 
 db_url = os.getenv("DATABASE_URL")
-if db_url and db_url.srartswith("postgresql://"):
+if db_url and db_url.startswith("postgresql://"):
     db_url = db_url.replace("postgresql://", "postgreqls+psycopg://", 1)
 print("DATABASE_URL =", os.getenv("DATABASE_URL"))
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:4elovek756@localhost:5432/my_project_db")
