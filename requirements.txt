@@ -8,6 +8,6 @@ bcrypt
 python-jose[cryptography]
 pydantic[email]
 python-multipart
-psycopg2-binary
+psycopg[binary]
 pytest
 httpx
